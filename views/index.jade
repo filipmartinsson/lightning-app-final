@@ -1,0 +1,32 @@
+extends ./layout
+
+block content
+  h1=message 
+  p This is a payment service for lightning. Very welcome!
+  div
+    form(method='post', action='/invoice')
+      h2 Product
+      p
+        input(type="radio" name="product" value='{"name": "Ice Cream", "price": 0.5}')
+        label Ice Cream - $0.5
+      p
+        input(type="radio" name="product" value='{"name": "Pizza", "price": 1}')
+        label Pizza - $1
+      p
+        input(type="radio" name="product" value='{"name": "Hamburger", "price": 2}')
+        label Hamburger - $2
+      h2 Customer Information
+      p
+        input(type="email", name="email", placeholder="Email Address")
+      p
+        input(type="text", name="name", placeholder="Full name")
+      p
+        input(type="text", name="address", placeholder="Address")
+      p
+        input(type="text", name="city", placeholder="City")
+      p
+        input(type="text", name="zipcode", placeholder="Zip/Postal Code")
+      p
+        input(type="text", name="country", placeholder="Country")
+      p
+        input(type='submit', name='submit')  
